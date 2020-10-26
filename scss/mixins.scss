@@ -1,0 +1,201 @@
+@mixin import-fonts {
+  @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap");
+}
+
+// style for div banner sections
+@mixin section-styles {
+  body {
+    background-color: $light-color;
+  }
+  .nav-logo {
+    height: auto;
+    width: 5%;
+  }
+  .navbar-brand a {
+    justify-content: left;
+  }
+  .home-img {
+    max-height: 850px;
+  }
+  .special-bake-a {
+    max-width: 250px;
+  }
+  .special-bake-img {
+    width: 80%;
+    height: auto;
+  }
+  .spacer-and-blurb,
+  .spacer-and-article {
+    background-color: $bright-color;
+  }
+
+  .blurb,
+  .special-bake,
+  .newsletter,
+  .menu {
+    padding-left: 15px;
+  }
+
+  .newsletter {
+    background-color: $light-color;
+  }
+  .sign-up-newsletter,
+  .contact-form,
+  .login-form,
+  .cart {
+    border: 1px solid $dark-color;
+    max-width: 350px;
+    padding: 20px;
+  }
+  .cart {
+    max-width: 400px;
+  }
+  .contact-form {
+    max-width: 700px;
+  }
+  input,
+  textarea {
+    border-radius: 0px;
+    border: 1px solid $dark-color;
+    width: 100%;
+    padding-left: 10px;
+  }
+  .newsletter button,
+  .contact-form button,
+  .special-bake-a,
+  .contact-submit,
+  .login-form button,
+  .cart button,
+  .log-out {
+    background-color: $bright-color;
+    border: 1px solid $bright-color;
+    border-radius: 0px;
+    padding: 6px 15px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .newsletter button:hover,
+  .contact-form button:hover,
+  .special-bake-a:hover,
+  .contact-submit:hover,
+  .login-form button:hover,
+  .cart button:hover,
+  .log-out:hover {
+    background-color: $dark-color;
+    border-color: $dark-color;
+  }
+  .sign-up-newsletter {
+    margin-top: 60px;
+  }
+  .form-control:focus {
+    box-shadow: none;
+    border-color: $bright-color;
+  }
+  .menu-nav {
+    background-color: $bright-color;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .section-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .card {
+    background-color: $light-color;
+    border: 1px solid $dark-color;
+    border-radius: 0px;
+    margin-bottom: 20px;
+    width: 18rem;
+  }
+  .card-img-top {
+    padding-top: 20px;
+  }
+  .card-title {
+    font-size: 1.5em;
+  }
+  .hours {
+    background-color: $bright-color;
+    padding: 50px;
+  }
+  .hours-list,
+  .footer-nav {
+    list-style: none;
+    padding: 0;
+  }
+  .hours img {
+    height: auto;
+    width: 45%;
+  }
+  .logo-img {
+    max-height: 80px;
+    max-width: 100px;
+  }
+  svg {
+    height: 2rem;
+    width: 2rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+    margin-right: 10px;
+    fill: $dark-color;
+  }
+  .log-out {
+    padding-top: 25px;
+  }
+}
+
+// assign fonts
+@mixin font-style {
+  body {
+    font-family: "Prompt", sans-serif;
+    color: $dark-color;
+  }
+  h1 {
+    font-weight: 700;
+  }
+  .nav-link {
+    color: $dark-color !important;
+  }
+  a:hover {
+    color: $bright-color !important;
+  }
+  .sign-up-newsletter {
+    color: $dark-color;
+  }
+  .newsletter button,
+  .special-bake-a,
+  .contact-submit,
+  .nav-link {
+    color: $dark-color;
+  }
+  .newsletter button:hover,
+  .special-bake-a:hover,
+  .contact-submit:hover,
+  .login-form button:hover,
+  .cart button:hover,
+  .log-out:hover {
+    color: $bright-color;
+    text-decoration: none;
+  }
+  .hours,
+  .menu-nav,
+  .footer-nav,
+  .log-out {
+    color: $dark-color;
+  }
+  .menu-nav a,
+  .footer-a {
+    text-decoration: none;
+    color: $dark-color;
+  }
+  .menu-nav a:hover,
+  .footer-a:hover {
+    text-decoration: underline $dark-color;
+    color: $dark-color !important;
+  }
+  .contact-form button:hover {
+    color: $light-color;
+  }
+  .menu-nav li {
+    font-size: 24px;
+  }
+}
