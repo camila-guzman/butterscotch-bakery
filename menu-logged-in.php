@@ -2,12 +2,6 @@
 include 'menu-array.php';
 include 'cart.php' ?>
 
-
-<!DOCTYPE html>
-<html>
-<!--include head section and navbar-->
-<?php include('templates/header.php'); ?>
-
 <div class="container">
     <div class="row">
         <h1 class="m-3 col-4">You're logged in!</h1>
@@ -73,6 +67,7 @@ include 'cart.php' ?>
             echo "<div class='card-body'> <h5 class='card-title'>" . $sweet[$i][1] . "</h5>";
             echo "<p class='card-text'>" . $sweet[$i][2] . "</p></div>";
         ?>
+            <!--add and remove buttons-->
             <div class='container'>
                 <div class='row'>
                     <div class='col-7'></div> <a class='col-2'><svg viewBox='0 0 16 16' class='bi bi-dash-square-fill' xmlns='http://www.w3.org/2000/svg'>
@@ -97,9 +92,20 @@ include 'cart.php' ?>
         echo "<div class='card mx-4 col-md-4 col-lg-3'>";
         echo "<img src='" . $savory[$i][0] . "'class='card-img-top' alt=''>";
         echo "<div class='card-body'> <h5 class='card-title'>" . $savory[$i][1] . "</h5>";
-        echo "<p class='card-text'>" . $savory[$i][2] . "</p></div></div>";
-    }
+        echo "<p class='card-text'>" . $savory[$i][2] . "</p></div>";
     ?>
+        <!--add and remove buttons-->
+        <div class='container'>
+            <div class='row'>
+                <div class='col-7'></div> <a class='col-2'><svg viewBox='0 0 16 16' class='bi bi-dash-square-fill' xmlns='http://www.w3.org/2000/svg'>
+                        <path fill-rule='evenodd' d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm2.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z' />
+                    </svg></a>
+                <a class='col-2 ml-2'><svg viewBox='0 0 16 16' class='bi bi-plus-square-fill' xmlns='http://www.w3.org/2000/svg'>
+                        <path fill-rule='evenodd' d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z' />
+                    </svg></a>
+            </div>
+        </div>
+</div> <?php } ?>
 </div>
 
 <!--drinks section-->
@@ -111,14 +117,20 @@ include 'cart.php' ?>
         echo "<div class='card mx-4 col-md-4 col-lg-3'>";
         echo "<img src='" . $drinks[$i][0] . "'class='card-img-top' alt=''>";
         echo "<div class='card-body'> <h5 class='card-title'>" . $drinks[$i][1] . "</h5>";
-        echo "<p class='card-text'>" . $drinks[$i][2] . "</p></div></div>";
-    }
+        echo "<p class='card-text'>" . $drinks[$i][2] . "</p></div>";
     ?>
+
+        <!--add and remove buttons-->
+        <div class='container'>
+            <div class='row'>
+                <div class='col-7'></div> <a class='col-2'><svg viewBox='0 0 16 16' class='bi bi-dash-square-fill' xmlns='http://www.w3.org/2000/svg'>
+                        <path fill-rule='evenodd' d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm2.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z' />
+                    </svg></a>
+                <a class='col-2 ml-2'><svg viewBox='0 0 16 16' class='bi bi-plus-square-fill' xmlns='http://www.w3.org/2000/svg'>
+                        <path fill-rule='evenodd' d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z' />
+                    </svg></a>
+            </div>
+        </div>
+</div><?php } ?>
 </div>
-
 </div>
-
-<!--include logo and hours section-->
-<?php include('templates/footer.php'); ?>
-
-</html>
