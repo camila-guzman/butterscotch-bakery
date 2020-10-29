@@ -50,11 +50,11 @@
           <h4>Subscribe to our newsletter</h4>
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="name" name="name" class="form-control">
+            <input type="name" class="form-control">
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" name="email">
+            <input type="email" class="form-control">
           </div>
           <button type="submit" class="btn">Subscribe</button>
         </form>
