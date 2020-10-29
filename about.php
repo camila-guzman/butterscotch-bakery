@@ -64,14 +64,21 @@
           <h4>Subscribe to our newsletter</h4>
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="name" class="form-control" id="name" />
+            <input type="name" class="form-control">
           </div>
           <div class="form-group">
-            <label for="email"">Email</label>
-              <input type=" email" class="form-control" id="email" />
+            <label for="email">Email</label>
+            <input type="email" class="form-control">
           </div>
           <button type="submit" class="btn">Subscribe</button>
         </form>
+
+        <?php
+        if (isset($_POST["name"])) { ?>
+          <h4 class="ml-3">Welcome to the club, <?php echo $_POST["name"] ?>!</h4>
+        <?php } else { ?>
+          <p>Don't worry, we know email spam is annoying. We only send the necessary goods</p>
+        <?php } ?>
       </div>
     </div>
   </div>
