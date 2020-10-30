@@ -46,25 +46,28 @@
       <!--sign-up form-->
       <div class="sign-up-newsletter mt-4 mb-5">
 
-        <form class="newsletter-form px-3 py-4" action="index.php" method="post">
-          <h4>Subscribe to our newsletter</h4>
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="name" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control">
-          </div>
-          <button type="submit" class="btn">Subscribe</button>
-        </form>
-
         <?php
-        if (isset($_POST["name"])) { ?>
+        session_start();
+        if (isset($_POST["name"])) {
+          $_SESSION['name'] = $_POST['name'];
+        ?>
           <h4 class="ml-3">Welcome to the club, <?php echo $_POST["name"] ?>!</h4>
         <?php } else { ?>
+          <form class="newsletter-form px-3 py-4" action="index.php" method="post">
+            <h4>Subscribe to our newsletter</h4>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="name" name="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="email">
+            </div>
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
           <p>Don't worry, we know email spam is annoying. We only send the necessary goods</p>
         <?php } ?>
+
       </div>
     </div>
     <div class="col-lg-1"></div>
