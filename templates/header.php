@@ -38,9 +38,9 @@
           <li class="nav-item">
             <a class="nav-link" href="contact.php">Contact</a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" href="place-order.php">Place Order</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
