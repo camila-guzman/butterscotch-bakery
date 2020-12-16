@@ -42,13 +42,15 @@
   .sign-up-newsletter,
   .contact-form,
   .login-form,
-  .cart {
+  .div-delete-acc form {
     border: 1px solid $dark-color;
     max-width: 350px;
     padding: 20px;
   }
   .cart {
-    max-width: 450px;
+    border: 1px solid $dark-color;
+    padding: 20px;
+    height: 150px;
   }
   .contact-form {
     max-width: 700px;
@@ -65,8 +67,10 @@
   .special-bake-a,
   .contact-submit,
   .login-form button,
-  .cart button,
-  .log-out {
+  .delete-acc-submit,
+  .log-out,
+  .delete-acc-form button,
+  .item-form button {
     background-color: $bright-color;
     border: 1px solid $bright-color;
     border-radius: 0px;
@@ -79,8 +83,10 @@
   .special-bake-a:hover,
   .contact-submit:hover,
   .login-form button:hover,
-  .cart button:hover,
-  .log-out:hover {
+  .delete-acc-submit:hover,
+  .log-out:hover,
+  .delete-acc-form button:hover,
+  .item-form button:hover {
     background-color: $dark-color;
     border-color: $dark-color;
   }
@@ -102,16 +108,19 @@
   }
   .card {
     background-color: $light-color;
-    border: 1px solid $dark-color;
-    border-radius: 0px;
+    border: none;
     margin-bottom: 20px;
     width: 18rem;
+  }
+  .card-body {
+    padding: 0;
+    padding-top: 10px;
   }
   .card-img-top {
     padding-top: 20px;
   }
   .card-title {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
   .hours {
     background-color: $bright-color;
@@ -122,13 +131,16 @@
     list-style: none;
     padding: 0;
   }
+  .footer-nav {
+    flex-wrap: wrap;
+  }
   .hours img {
     height: auto;
     width: 45%;
   }
   .logo-img {
-    max-height: 80px;
-    max-width: 100px;
+    max-height: 70px;
+    max-width: 90px;
   }
   svg {
     height: 2rem;
@@ -140,6 +152,23 @@
   }
   .log-out {
     padding-top: 25px;
+    height: 100vh;
+  }
+  .div-logged-in {
+    height: 55vh;
+    border: none;
+    display: block;
+  }
+  .div-log-out {
+    height: 55vh;
+  }
+  .div-log-out a,
+  .div-logged-in a,
+  .acc-info-btn {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: white;
   }
 }
 
@@ -155,7 +184,8 @@
   .nav-link {
     color: $dark-color !important;
   }
-  a:hover {
+  a:hover,
+  .div-logged-in a:hover {
     color: $bright-color !important;
   }
   .sign-up-newsletter {
@@ -164,15 +194,24 @@
   .newsletter button,
   .special-bake-a,
   .contact-submit,
-  .nav-link {
+  .nav-link,
+  .delete-acc-submit,
+  .div-logged-in a,
+  .div-delete-acc a,
+  .div-log-out a,
+  .item-form button {
     color: $dark-color;
   }
   .newsletter button:hover,
   .special-bake-a:hover,
   .contact-submit:hover,
   .login-form button:hover,
-  .cart button:hover,
-  .log-out:hover {
+  .delete-acc-submit:hover,
+  .log-out:hover,
+  .div-logged-in a:hover,
+  .div-delete-acc a:hover,
+  .div-log-out a:hover,
+  .item-form button:hover {
     color: $bright-color;
     text-decoration: none;
   }
@@ -196,6 +235,11 @@
     color: $light-color;
   }
   .menu-nav li {
+    font-size: 24px;
+  }
+  .div-logged-in a,
+  .div-delete-acc a,
+  .div-log-out a {
     font-size: 24px;
   }
 }

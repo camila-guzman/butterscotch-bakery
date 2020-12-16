@@ -10,37 +10,83 @@
   </head>
 
   <body>
+    <?php
+    session_start();
 
-    <!--nav bar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    if ((isset($_SESSION["loggedin"])) && ($_SESSION["loggedin"])) {
+    ?>
+      <!--nav bar-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
 
-      <!--logo-->
-      <img class="nav-logo navbar-brand" src="images/bb-logo.png" href="index.php">
+        <!--logo-->
+        <img class="nav-logo navbar-brand" src="images/bb-logo.png" href="index.php">
 
-      <a href="index.php" class="navbar-brand">Butterscotch Bakery</a>
+        <a href="index.php" class="navbar-brand">Butterscotch Bakery</a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!--navbar link section-->
-      <div class="collapse navbar-collapse" id="navbarToggler">
-        <ul class="navbar-nav mr-auto mt-3 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="menu.php">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.php">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.php">Contact</a>
-          </li>
-          <!--<li class="nav-item">
-            <a class="nav-link" href="place-order.php">Place Order</a>
-          </li> -->
-        </ul>
-      </div>
-    </nav>
+        <!--navbar link section-->
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav mr-auto mt-3 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.php">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.php">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.php">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shopping.php">Place Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="account.php">My Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="log-out.php">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <?php } else { ?>
+      <!--nav bar-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+
+        <!--logo-->
+        <img class="nav-logo navbar-brand" src="images/bb-logo.png" href="index.php">
+
+        <a href="index.php" class="navbar-brand">Butterscotch Bakery</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--navbar link section-->
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav mr-auto mt-3 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.php">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.php">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.php">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="place-order.php">Place Order</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <?php }
+    ?>
