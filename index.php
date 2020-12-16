@@ -2,9 +2,7 @@
 <html>
 
 <!--include head section and navbar-->
-<?php
-
-include('templates/header.php'); ?>
+<?php include('templates/header.php'); ?>
 
 <!--welcome heading-->
 <h1 class=" home-heading m-3 mt-0">Welcome to Butterscotch Bakery!</h1>
@@ -49,6 +47,7 @@ include('templates/header.php'); ?>
       <div class="sign-up-newsletter mt-4 mb-5">
 
         <?php
+        session_start();
         if (isset($_POST["name"])) {
           $_SESSION['name'] = $_POST['name'];
         ?>
